@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anti Ansiedade – Workbook de Allyson Jossaia</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f3ea;--ink:#16261e;--green:#1f3d2f;--green2:#2f5a45;--sage:#dfe7d8;--card:#fffdf8;--cta:#e0a63a;--ctaink:#1b1405;--line:#e4dccb;--muted:#5d6b62;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10201a;--ink:#f1ece0;--green:#0b1812;--green2:#7fb08f;--sage:#1b3128;--card:#172a22;--line:#2a4136;--muted:#a9b9ae}}
+:root[data-theme="dark"]{--bg:#10201a;--ink:#f1ece0;--green:#0b1812;--green2:#7fb08f;--sage:#1b3128;--card:#172a22;--line:#2a4136;--muted:#a9b9ae}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Outfit,system-ui,sans-serif}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;font-weight:800;letter-spacing:-.02em}
+h1{font-size:clamp(2.2rem,6.4vw,3.8rem)}h2{font-size:clamp(1.7rem,4.6vw,2.5rem)}
+.script{font-family:Caveat,cursive;font-weight:700;color:var(--green2);font-size:1.7rem;line-height:1.1}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.bar{background:var(--green);color:#f4efe2;text-align:center;padding:9px 12px;font-size:.92rem;font-weight:500}
+.btn{display:inline-block;background:var(--cta);color:var(--ctaink);font:600 1.1rem Outfit,sans-serif;padding:17px 30px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 6px 0 #a97a1c;transition:transform .1s,box-shadow .1s;text-align:center}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #a97a1c}
+.btn.pulse{animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.btn.pulse{animation:none}html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--cta);outline-offset:3px}
+.hero{display:grid;gap:28px;align-items:center;padding-top:34px}
+@media(min-width:800px){.hero{grid-template-columns:1.1fr .9fr}}
+.hero img{width:100%;border-radius:28px;display:block;box-shadow:0 20px 50px rgba(20,40,30,.28)}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.pills span{background:var(--sage);padding:7px 14px;border-radius:999px;font-size:.92rem;font-weight:500}
+.sub{font-size:.9rem;color:var(--muted);margin-top:12px}
+/* quiz */
+#quiz{background:var(--green);color:#f4efe2}
+.qbox{max-width:640px;margin:0 auto;background:var(--card);color:var(--ink);border-radius:26px;padding:28px 24px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.prog{height:9px;background:var(--sage);border-radius:9px;overflow:hidden;margin-bottom:8px}
+.prog i{display:block;height:100%;width:0;background:var(--green2);transition:width .4s}
+.qn{font-size:.9rem;color:var(--muted);margin-bottom:18px}
+.qbox h3{font-size:1.4rem}
+.opt{display:block;width:100%;text-align:left;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:16px;padding:15px 18px;margin:10px 0;font:500 1rem Outfit,sans-serif;cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--green2);transform:translateX(4px)}
+.opt.sel{background:var(--green2);color:#fff;border-color:var(--green2)}
+.center{text-align:center}
+.loader{width:54px;height:54px;border:6px solid var(--sage);border-top-color:var(--green2);border-radius:50%;margin:20px auto;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.score{font-size:3rem;font-weight:800;color:var(--green2)}
+/* offer */
+#offer{display:none}
+.offer-top{display:grid;gap:30px;align-items:center}
+@media(min-width:800px){.offer-top{grid-template-columns:.8fr 1.2fr}}
+.offer-top img{width:100%;max-width:340px;margin:0 auto;display:block;border-radius:10px;box-shadow:0 24px 40px rgba(0,0,0,.3);transform:rotate(-2deg)}
+.timer{display:inline-block;background:var(--green);color:#fff;border-radius:12px;padding:8px 16px;font-weight:600;margin:6px 0 18px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.card b{display:block;font-size:1.1rem;margin:6px 0}
+.ic{font-size:1.9rem}
+.tint{background:var(--sage)}
+ul.ck{list-style:none;padding:0;margin:0}
+ul.ck li{padding:9px 0 9px 34px;position:relative;border-bottom:1px dashed var(--line)}
+ul.ck li:before{content:"✔";position:absolute;left:0;color:var(--green2);font-weight:800}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:600}
+.final{background:var(--green);color:#f4efe2;border-radius:28px;padding:40px 24px;text-align:center}
+.final .script{color:#cfe3c9}
+.price{margin:6px 0 18px}.price s{color:var(--muted);font-size:1.2rem}.price b{display:block;font-size:2.8rem;line-height:1;color:var(--green2);font-weight:800}.price em{font-style:normal;background:#c0392b;color:#fff;border-radius:8px;padding:2px 10px;font-size:.85rem;font-weight:600;margin-left:6px;vertical-align:middle}.final .price b{color:#fff}.final .price s{color:#cfe3c9}
+.book{position:relative;max-width:300px;margin:0 auto 8px;transform:rotate(-3deg);transition:transform .3s}
+.book:hover{transform:rotate(0) scale(1.03)}
+.book .bk{position:relative;border-radius:3px 9px 9px 3px;box-shadow:1px 0 0 #f4efe6,2px 1px 0 #cfc6b4,3px 2px 0 #f4efe6,4px 3px 0 #cfc6b4,5px 4px 0 #f4efe6,6px 5px 0 #b9ae98,22px 28px 36px rgba(0,0,0,.38)}
+.book img{display:block;width:100%;height:auto;max-width:none;border-radius:3px 9px 9px 3px;box-shadow:none;transform:none;margin:0}
+.book .bk:before{content:"";position:absolute;inset:0;border-radius:3px 9px 9px 3px;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.28) 0,rgba(255,255,255,.28) 2.5%,rgba(0,0,0,.12) 5%,transparent 9%),linear-gradient(115deg,rgba(255,255,255,.22) 0,transparent 35%)}
+.book.sm{max-width:140px;margin-bottom:14px}
+.btn2{background:transparent;color:var(--green2);border:2px solid var(--green2);box-shadow:none;margin-top:14px;padding:13px 26px;font-size:1rem}.btn2:hover{box-shadow:none;background:var(--sage)}.final .btn2{color:#fff;border-color:#cfe3c9}.final .btn2:hover{background:rgba(255,255,255,.12)}.alt{font-size:.88rem;color:var(--muted);margin:16px 0 0}.final .alt{color:#cfe3c9}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px 110px}
+/* floating */
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35);z-index:50}
+.wa svg{width:34px;height:34px;fill:#fff}
+#sticky{display:none;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--green);padding:10px 90px calc(10px + env(safe-area-inset-bottom,0px)) 14px;align-items:center;gap:12px;justify-content:center}
+#sticky .btn{padding:12px 22px;font-size:1rem;box-shadow:none}
+#sticky span{color:#fff;font-size:.9rem}
+/* modal */
+#exit{display:none;position:fixed;inset:0;background:rgba(8,18,13,.75);z-index:100;align-items:center;justify-content:center;padding:18px}
+#exit.on{display:flex}
+.modal{background:var(--card);color:var(--ink);border-radius:28px;max-width:470px;width:100%;padding:30px 24px;text-align:center;position:relative;max-height:92vh;overflow:auto}
+.modal img{width:130px;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,.3);margin-bottom:10px}
+.x{position:absolute;top:12px;right:16px;background:none;border:0;font-size:1.8rem;color:var(--muted);cursor:pointer}
+.tag{display:inline-block;background:#c0392b;color:#fff;border-radius:8px;padding:3px 12px;font-weight:600;font-size:.85rem;margin-bottom:10px}
+.nolink{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;margin-top:14px;font:inherit;font-size:.9rem}
+</style></head><body>
+<div class="bar">🌿 Teste gratuito de 1 minuto: descobre o teu nível de ansiedade</div>
+
+<header class="wrap hero">
+ <div>
+  <div class="script">Cuide da sua mente, ela também importa!</div>
+  <h1>Pára de viver preso(a) à ansiedade e recupera a tua leveza.</h1>
+  <p class="lead">O Workbook Anti Ansiedade reúne técnicas práticas, simples e passo a passo para acalmar a mente, recuperar o equilíbrio e viver com mais leveza.</p>
+  <div class="pills"><span>🌬️ Respiração</span><span>🧠 Pensamentos</span><span>💚 Hábitos</span><span>☀️ Equilíbrio</span></div>
+  <a href="#quiz" class="btn pulse" id="startTop">Fazer o teste gratuito agora</a>
+  <p class="sub">Leva menos de 1 minuto · 6 perguntas rápidas · No fim, vês a tua recomendação</p>
+ </div>
+ <img src="images/hero.jpg" alt="Jovem sorridente a mostrar o workbook Anti Ansiedade" width="640" height="960">
+</header>
+
+<section class="wrap">
+ <div class="grid">
+  <div class="card"><div class="ic">😮‍💨</div><b>Coração acelerado?</b>Aprende a acalmar o corpo em poucos minutos.</div>
+  <div class="card"><div class="ic">🌀</div><b>Mente que não pára?</b>Estratégias para controlar pensamentos em excesso.</div>
+  <div class="card"><div class="ic">🌙</div><b>Noites difíceis?</b>Hábitos simples para descansar com mais paz.</div>
+ </div>
+</section>
+
+<section id="quiz"><div class="wrap">
+ <div class="center" style="margin-bottom:24px"><div class="script" style="color:#cfe3c9">Seu bem-estar começa aqui</div><h2>Descobre o teu nível de ansiedade</h2></div>
+ <div class="qbox" id="qbox"></div>
+</div></section>
+
+<div id="offer">
+<section class="wrap">
+ <div class="center"><div class="script">Resultado pronto, e o teu plano também 💚</div></div>
+ <div class="offer-top">
+  <div class="book"><div class="bk"><img src="images/cover.jpg" alt="Capa do e-book Anti Ansiedade"></div></div>
+  <div>
+   <h2>Workbook Anti Ansiedade: o guia completo para cuidar da tua saúde mental</h2>
+   <p>Um e-book prático, escrito por <b>Allyson Jossaia</b>, com exercícios que podes aplicar hoje mesmo, no teu ritmo e no conforto de casa.</p>
+   <div class="timer">⏳ Oferta de hoje termina em <span id="cd">10:00</span></div><div class="price"><s>De 397 MT</s><em>-50%</em><b>Por apenas 197 MT</b></div>
+   <a class="btn pulse" href="https://checkout.escalepay.com/9410634" target="_blank" rel="noopener">Quero o meu Workbook agora</a><p class="alt">Prefere pagar em reais?</p><a class="btn btn2" href="https://jossaiaallyson684.hotmart.host/nova-pagina-2b6a312f-1294-41db-a616-bc951e6fa98c" target="_blank" rel="noopener">Comprar por R$ 47 (Hotmart)</a>
+   <p class="sub">🔒 Compra segura · Acesso imediato após o pagamento · Lê no telemóvel ou computador</p>
+  </div>
+ </div>
+</section>
+<section class="tint"><div class="wrap">
+ <h2 class="center">O que vais encontrar lá dentro</h2>
+ <div class="grid">
+  <div class="card"><div class="ic">🌬️</div><b>Exercícios de respiração</b>Técnicas rápidas para baixar a tensão em momentos de crise.</div>
+  <div class="card"><div class="ic">🧠</div><b>Controlo dos pensamentos</b>Aprende a quebrar o ciclo de preocupação e ruminação.</div>
+  <div class="card"><div class="ic">💚</div><b>Hábitos que reduzem a ansiedade</b>Pequenas mudanças diárias com grande efeito.</div>
+  <div class="card"><div class="ic">☀️</div><b>Equilíbrio, foco e qualidade de vida</b>Mais clareza para o trabalho, estudos e relações.</div>
+ </div>
+</div></section>
+<section class="wrap">
+ <div class="grid" style="align-items:start">
+  <div><h2>Este workbook é para ti se…</h2>
+   <ul class="ck"><li>Sentes preocupação constante sem saber porquê</li><li>Tens dificuldade em desligar a mente à noite</li><li>Queres técnicas práticas, não teoria complicada</li><li>Procuras mais calma, foco e leveza no dia a dia</li><li>Queres começar hoje, sem sair de casa</li></ul></div>
+  <div class="card"><h3>Porque funciona?</h3><p>Porque é um <b>workbook</b>: não é só para ler, é para <b>fazer</b>. Cada técnica vem pensada para ser aplicada passo a passo, até se tornar um hábito.</p><p class="sub">Este material é de apoio ao bem-estar e não substitui acompanhamento de um profissional de saúde mental.</p></div>
+ </div>
+</section>
+<section class="wrap">
+ <div class="final">
+  <div class="script">Garanta já o seu</div>
+  <h2>Começa hoje a transformar a tua saúde mental</h2>
+  <p>A tua mente também importa. Dá o primeiro passo agora.</p><div class="price"><s>De 397 MT</s><em>-50%</em><b>Por apenas 197 MT</b></div>
+  <a class="btn pulse" href="https://checkout.escalepay.com/9410634" target="_blank" rel="noopener">Sim, quero o Workbook Anti Ansiedade</a><p class="alt">Prefere pagar em reais?</p><a class="btn btn2" href="https://jossaiaallyson684.hotmart.host/nova-pagina-2b6a312f-1294-41db-a616-bc951e6fa98c" target="_blank" rel="noopener">Comprar por R$ 47 (Hotmart)</a>
+ </div>
+</section>
+<section class="wrap"><h2>Perguntas frequentes</h2>
+ <details><summary>Como recebo o e-book?</summary><p>Depois do pagamento na plataforma segura, recebes o acesso ao material de forma imediata.</p></details>
+ <details><summary>Preciso de experiência ou de materiais?</summary><p>Não. Os exercícios são simples e podes fazê-los em qualquer lugar, só precisas de alguns minutos por dia.</p></details>
+ <details><summary>Posso ler no telemóvel?</summary><p>Sim, funciona no telemóvel, tablet e computador.</p></details>
+ <details><summary>Tenho dúvidas antes de comprar. Com quem falo?</summary><p>Clica no botão verde do WhatsApp e fala connosco directamente.</p></details>
+</section>
+</div>
+
+<footer>© Anti Ansiedade · Allyson Jossaia</footer>
+
+<div id="sticky"><span><s>397</s> <b>197 MT</b></span><a class="btn" href="https://checkout.escalepay.com/9410634" target="_blank" rel="noopener">Comprar agora</a></div>
+
+<a class="wa" id="wa" href="https://wa.me/258844833882?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Workbook%20Anti%20Ansiedade." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.600L3 29l7.100-1.900c1.800 1 3.800 1.500 5.900 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.900c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.200 1.100 1.100-4.100-.3-.4a10.300 10.300 0 0 1-1.600-5.400C5.300 9.900 10.100 5.200 16 5.200s10.700 4.700 10.700 10.400S21.900 25.900 16 25.900zm5.900-7.700c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.2.200 2.100 3.200 5.100 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.900-.8 2.100-1.500s.3-1.400.2-1.500-.3-.2-.6-.4z"/></svg></a>
+
+<div id="exit" role="dialog" aria-modal="true" aria-label="Última oferta"><div class="modal">
+ <button class="x" id="xb" aria-label="Fechar">×</button>
+ <span class="tag">ESPERA! ÚLTIMA OFERTA</span>
+ <div class="book sm"><div class="bk"><img src="images/cover.jpg" alt="Capa do e-book Anti Ansiedade"></div></div>
+ <h2 style="font-size:1.6rem">Não vás embora de mãos vazias</h2>
+ <p>Esta é a tua última oportunidade de garantir o <b>Workbook Anti Ansiedade</b> por apenas <b>197 MT</b> (em vez de 397 MT). A tua tranquilidade começa com um passo.</p>
+ <a class="btn pulse" href="https://checkout.escalepay.com/9410634" target="_blank" rel="noopener">Aproveitar a última oferta</a><br>
+ <button class="nolink" id="no">Não, prefiro continuar com ansiedade</button>
+</div></div>
+
+<script>
+var Q=[
+["Com que frequência sentes preocupação excessiva ou nervosismo?",["Quase todos os dias","Algumas vezes por semana","Raramente"]],
+["Como está o teu sono ultimamente?",["Acordo várias vezes ou não consigo adormecer","Durmo, mas acordo cansado(a)","Durmo bem"]],
+["O que mais gostarias de aprender?",["Acalmar o corpo com respiração","Controlar pensamentos negativos","Criar hábitos que reduzem a ansiedade","Tudo isto!"]],
+["Já tentaste algo para controlar a ansiedade?",["Sim, mas sem resultados duradouros","Tentei por conta própria, sem método","Nunca tentei nada"]],
+["Quanto tempo por dia podes dedicar a ti?",["5 a 10 minutos","15 a 20 minutos","Mais de 30 minutos"]],
+["Como gostarias de te sentir daqui a 30 dias?",["Mais calmo(a) e com leveza","Com foco e energia","Em equilíbrio com a minha vida","Tudo isto!"]]
+];
+var P=[[3,2,0],[3,2,0],[1,1,1,2],[3,2,0],[0,0,0],[1,1,1,2]],pts=0,MAX=13;
+var i=0,box=document.getElementById('qbox'),done=false;
+function show(){
+ var q=Q[i],h='<div class="prog"><i style="width:'+(i/Q.length*100)+'%"></i></div><div class="qn">Pergunta '+(i+1)+' de '+Q.length+'</div><h3>'+q[0]+'</h3>';
+ q[1].forEach(function(o,k){h+='<button class="opt" data-k="'+k+'">'+o+'</button>'});
+ box.innerHTML=h;
+ box.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){b.classList.add('sel');pts+=P[i][+b.dataset.k];setTimeout(function(){i++;i<Q.length?show():analyse()},280)}});
+}
+function analyse(){
+ box.innerHTML='<div class="center"><div class="prog"><i style="width:100%"></i></div><div class="loader"></div><h3>A analisar as tuas respostas…</h3><p class="sub">A preparar o teu plano personalizado</p></div>';
+ setTimeout(function(){
+  var pct=25+Math.round(pts/MAX*70),lv,tx;
+  if(pct<45){lv='Leve';tx='Estás num bom caminho. O workbook ajuda-te a prevenir e a manter o equilíbrio emocional no dia a dia.'}
+  else if(pct<70){lv='Moderado';tx='Já há sinais que merecem atenção. As técnicas de respiração, pensamentos e hábitos do workbook podem ajudar-te a recuperar a calma.'}
+  else{lv='Elevado';tx='Os sinais são fortes, e as técnicas práticas do workbook foram pensadas para dar alívio. Se persistirem, procura também apoio profissional.'}
+  box.innerHTML='<div class="center"><p class="qn">O teu nível de ansiedade</p><div class="score" id="sc">0%</div><div class="prog" style="height:14px"><i id="mt" style="width:0"></i></div><h3>Nível '+lv.toLowerCase()+'</h3><p>'+tx+'</p><button class="btn pulse" id="see">Ver o meu plano e a oferta</button><p class="sub">Teste informativo, não substitui avaliação profissional.</p></div>';
+  var n=0,c=setInterval(function(){n=Math.min(pct,n+2);document.getElementById('sc').textContent=n+'%';document.getElementById('mt').style.width=n+'%';if(n>=pct)clearInterval(c)},25);
+  document.getElementById('see').onclick=reveal;
+ },2600);
+}
+function reveal(){
+ done=true;document.getElementById('offer').style.display='block';
+ document.getElementById('sticky').style.display='flex';
+ document.getElementById('offer').scrollIntoView();
+ startTimer();
+}
+var t=600,tm;function startTimer(){clearInterval(tm);tm=setInterval(function(){t=Math.max(0,t-1);var m=Math.floor(t/60),s=t%60;document.getElementById('cd').textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s},1000)}
+/* última oferta ao sair */
+var shown=false,ex=document.getElementById('exit');
+function openExit(){if(shown)return;shown=true;ex.classList.add('on')}
+function closeExit(){ex.classList.remove('on')}
+document.getElementById('xb').onclick=closeExit;document.getElementById('no').onclick=closeExit;
+document.addEventListener('mouseout',function(e){if(e.clientY<=0&&!e.relatedTarget)openExit()});
+try{history.pushState({a:1},'');window.addEventListener('popstate',function(){if(!shown&&!location.hash){openExit();history.pushState({a:1},'')}})}catch(e){}
+document.getElementById('startTop').onclick=function(e){e.preventDefault();document.getElementById('quiz').scrollIntoView({behavior:'smooth'})};
+show();
+</script></body></html>
